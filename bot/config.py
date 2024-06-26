@@ -5,12 +5,12 @@ load_dotenv("config.env")
 
 
 class Telegram:
-    API_ID = int(getenv("API_ID", "26796802"))
-    API_HASH = getenv("API_HASH", "b8cc96196eb105c33d8ce193e5efff5c")
-    BOT_TOKEN = getenv("BOT_TOKEN", "6478225213:AAH8oATDQxRF8V6ZnVtjkDhPl8BXe-X_94k")
+    API_ID = int(getenv("API_ID"))
+    API_HASH = getenv("API_HASH")
+    BOT_TOKEN = getenv("BOT_TOKEN")
     PORT = int(getenv("PORT", "8080"))
-    BASE_URL = getenv("BASE_URL", "https://indexa-5ec7a8c430f7.herokuapp.com/").rstrip('/')
-    DATABASE_URL = getenv("DATABASE_URL", "mongodb+srv://Eln:Chaik2501@cipid.4whqkv9.mongodb.net/")
+    BASE_URL = getenv("BASE_URL").rstrip('/')
+    DATABASE_URL = getenv("DATABASE_URL")
     AUTH_CHANNEL = [channel.strip()
                     for channel in getenv("AUTH_CHANNEL").split(",")]
     THEME = getenv("THEME", "quartz")
